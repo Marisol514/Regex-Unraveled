@@ -81,105 +81,117 @@ Quantifiers in regex are symbols that specify the quantity or repetition of char
 
 The OR operator in regex, represented by the vertical bar |, allows you to specify alternatives within a pattern. It matches either the expression before or after it. For example, cat|dog would match either "cat" or "dog". The OR operator is useful for creating patterns that can match multiple variations of a particular substring.
 
-Example: 
-|: Matches either the expression before or after it.
+**Example:** 
+- |: Matches either the expression before or after it.
 
-Regex: cat|dog
-Description: This regex matches either "cat" or "dog" in the text.
+**Regex:** cat|dog
+
+**Description:** This regex matches either "cat" or "dog" in the text.
 
 ### Character Classes
 
 Character classes in regex allow you to specify a set of characters that can match at a particular position in the pattern. They are enclosed in square brackets [ ]. For example, [aeiou] matches any vowel, and [0-9] matches any digit. Character classes provide a convenient way to define patterns that can match different characters at a given position.
 
-Example: 
-[aeiou]: Matches any vowel character.
-[0-9]: Matches any digit character.
-[a-zA-Z]: Matches any alphabetical character (both lowercase and uppercase).
+**Example:** 
+- [aeiou]: Matches any vowel character.
+- [0-9]: Matches any digit character.
+- [a-zA-Z]: Matches any alphabetical character (both lowercase and uppercase).
 
-Regex: [aeiou]
-Description: This regex matches any vowel character in the text.
+**Regex:** [aeiou]
+
+**Description:** This regex matches any vowel character in the text.
 
 ### Flags
 
 Flags, also known as modifiers, are additional parameters that can be added to a regex pattern to change its behavior. They modify how the regex engine interprets the pattern. Common flags include i for case-insensitive matching, g for global matching (finding all matches rather than stopping after the first one), and m for multiline mode (changing the behavior of ^ and $ to match the beginning and end of lines instead of the entire string).
 
-Example: 
-i: Case-insensitive matching.
-g: Global matching (finding all matches rather than stopping after the first one).
-m: Multiline mode (changing the behavior of ^ and $ to match the beginning and end of lines instead of the entire string).
+**Example:** 
+- i: Case-insensitive matching.
+- g: Global matching (finding all matches rather than stopping after the first one).
+- m: Multiline mode (changing the behavior of ^ and $ to match the beginning and end of lines instead of the entire string).
 
-Regex: /hello/i
-Description: This regex matches "hello" case-insensitively in the text.
+**Regex:** /hello/i
+
+**Description:** This regex matches "hello" case-insensitively in the text.
 
 
 ### Grouping and Capturing
 
 Grouping in regex allows you to treat multiple characters as a single unit. Parentheses () are used to create groups. Capturing groups not only group the regex but also capture the text matched by the regex inside them for later use. Understanding grouping and capturing is essential for extracting specific parts of a match or applying modifications to matched tex
 
-Example: 
-(): Creates a capturing group.
+**Example:** 
+- (): Creates a capturing group.
 
-Regex: (\d{3})-(\d{3})-(\d{4})
-Description: This regex captures a phone number in the format XXX-XXX-XXXX.
+**Regex:** (\d{3})-(\d{3})-(\d{4})
+
+**Description:** This regex captures a phone number in the format XXX-XXX-XXXX.
 
 ### Bracket Expressions
 
 Bracket expressions, also known as character classes or character sets, match any one of the characters enclosed within square brackets [ ]. They provide a concise way to specify a set of characters that can match at a particular position in the pattern. Bracket expressions offer flexibility in defining patterns that match various characters or character ranges.
 
-Example: 
-[abc]: Matches any of the characters inside the brackets.
-[^abc]: Matches any character except those inside the brackets.
+**Example:** 
+- [abc]: Matches any of the characters inside the brackets.
+- [^abc]: Matches any character except those inside the brackets.
 
-Regex: [abc]
-Description: This regex matches any of the characters 'a', 'b', or 'c' in the text.
+**Regex:** [abc]
+
+**Description:** This regex matches any of the characters 'a', 'b', or 'c' in the text.
 
 ### Greedy and Lazy Match
 
 Greedy and lazy quantifiers control the behavior of quantified expressions in regex. Greedy quantifiers match as much text as possible, while lazy quantifiers match as little text as possible. Greedy quantifiers are represented by *, +, and ?, while lazy quantifiers are represented by adding a ? after the quantifier. Understanding the difference between greedy and lazy quantifiers is crucial for fine-tuning regex patterns and avoiding unintended matches.
 
-Example: 
-* (greedy): Matches as much text as possible.
-*? (lazy): Matches as little text as possible.
+**Example:** 
+- * (greedy): Matches as much text as possible.
+- *? (lazy): Matches as little text as possible.
 
-Text: <p>Hello</p><p>World</p>
-Regex: <p>.*</p>
-Description: This greedy regex matches <p>Hello</p><p>World</p> in the text.
-Regex: <p>.*?</p>
-Description: This lazy regex matches <p>Hello</p> and <p>World</p> separately.
+ - Text: `<p>Hello</p><p>World</p>`
+
+
+**Regex:** <p>.*</p>
+
+**Description:** This greedy regex matches &lt;p&gt;Hello&lt;/p&gt;&lt;p&gt;World&lt;/p&gt; in the text.</span>
+
 
 ### Boundaries
 
 Boundaries in regex define positions in the text where certain conditions are met. Common boundaries include \b for word boundaries and \B for non-word boundaries. Word boundaries match positions where a word character \w is not followed or preceded by another word character, while non-word boundaries match positions where two word characters or two non-word characters are adjacent. Using boundaries helps in specifying precise search conditions.
 
-Examples: 
-\b: Matches a word boundary.
-\B: Matches a non-word boundary.
+**Examples:** 
 
-Regex: \bcat\b
-Description: This regex matches the word "cat" as a whole word in the text.
+- \b: Matches a word boundary.
+- \B: Matches a non-word boundary.
+
+**Regex:** \bcat\b
+
+**Description:** This regex matches the word "cat" as a whole word in the text.
 
 ### Back-references
 
 Back-references in regex allow you to reuse text that has already been matched by a capturing group. They refer back to the contents of capturing groups within the same regex pattern. Back-references are represented by \1, \2, etc., where the number corresponds to the index of the capturing group. Leveraging back-references enables advanced pattern matching and substitution techniques.
 
-Examples: 
-\1, \2, etc.: Refers back to the contents of capturing groups.
+**Examples:** 
+- \1, \2, etc.: Refers back to the contents of capturing groups.
 
-Regex: (\d{3})-(\d{3})-(\d{4}) \1-\2-\3
-Description: This regex matches a phone number followed by the same phone number again (e.g., 123-456-7890 123-456-7890).
+**Regex:** (\d{3})-(\d{3})-(\d{4}) \1-\2-\3
+
+**Description:** This regex matches a phone number followed by the same phone number again (e.g., 123-456-7890 123-456-7890).
 
 ### Look-ahead and Look-behind
 
 Look-ahead and look-behind assertions in regex allow you to assert whether a particular pattern is or is not followed by or preceded by another pattern, without including the matched text in the overall match result. Look-ahead assertions are represented by (?=...), while look-behind assertions are represented by (?<=...) for positive assertions and (?<!...) for negative assertions. Mastering look-ahead and look-behind assertions expands the capabilities of regex for more complex matching requirements.
 
-Example: 
-(?=...): Positive look-ahead assertion.
-(?<=...): Positive look-behind assertion.
-(?!...): Negative look-ahead assertion.
-(?<!...): Negative look-behind assertion.
+**Example:**
 
-Regex: (?<=\d{3}-)\d{3}-\d{4}
-Description: This regex matches a phone number preceded by another phone number in the format XXX-XXX-XXXX.
+- (?=...): Positive look-ahead assertion.
+- (?<=...): Positive look-behind assertion.
+- (?!...): Negative look-ahead assertion.
+- (?<!...): Negative look-behind assertion.
+
+**Regex:** (?<=\d{3}-)\d{3}-\d{4}
+
+**Description:** This regex matches a phone number preceded by another phone number in the format XXX-XXX-XXXX.
 
 ## Author
 
