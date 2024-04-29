@@ -1,69 +1,66 @@
 # README-Artisan
-Module 17 lsgit  Challenge
+Module 17 Challenge
 
 ## My Task
 
 ```
-My task is to create a command-line application that dynamically generates a professional README.md file from a user's input using the Inquirer package.
-The application should be invoked by using the comad node index.js. Becuase the application will not be deployed I will also need to provide a walk trough video that demiostrates its fuctionality with Screencastify and add it to to the README, of my project. 
+My assignment this week is to create a tutorial that explains how a specific regular expression, or regex, functions by breaking down each part of the expression and describing what it does. 
 ```
 
 ## User Story
 ```md
-AS A developer
-I WANT a README generator
-SO THAT I can quickly create a professional README for a new project
+AS A web development student
+I WANT a tutorial explaining a specific regex
+SO THAT I can understand the search pattern the regex defines
 ```
 
 ## Acceptanc Criteria
 ```md
-GIVEN a command-line application that accepts user input
-WHEN I am prompted for information about my application repository
-THEN a high-quality, professional README.md is generated with the title of my project and sections entitled Description, Table of Contents, Installation, Usage, License, Contributing, Tests, and Questions
-WHEN I enter my project title
-THEN this is displayed as the title of the README
-WHEN I enter a description, installation instructions, usage information, contribution guidelines, and test instructions
-THEN this information is added to the sections of the README entitled Description, Installation, Usage, Contributing, and Tests
-WHEN I choose a license for my application from a list of options
-THEN a badge for that license is added near the top of the README and a notice is added to the section of the README entitled License that explains which license the application is covered under
-WHEN I enter my GitHub username
-THEN this is added to the section of the README entitled Questions, with a link to my GitHub profile
-WHEN I enter my email address
-THEN this is added to the section of the README entitled Questions, with instructions on how to reach me with additional questions
-WHEN I click on the links in the Table of Contents
-THEN I am taken to the corresponding section of the README
+GIVEN a regex tutorial
+WHEN I open the tutorial
+THEN I see a descriptive title and introductory paragraph explaining the purpose of the tutorial, a summary describing the regex featured in the tutorial, a table of contents linking to different sections that break down each component of the regex and explain what it does, and a section about the author with a link to the author’s GitHub profile
+WHEN I click on the links in the table of contents
+THEN I am taken to the corresponding sections of the tutorial
+WHEN I read through each section of the tutorial
+THEN I find a detailed explanation of what a specific component of the regex does
+WHEN I reach the end of the tutorial
+THEN I find a section about the author and a link to the author’s GitHub profile
+
 ```
 
 ## Guidelines:
 ```
-* Create a `.gitignore` file and include `node_modules/` and `.DS_Store/` so that your `node_modules` directory isn't tracked or uploaded to GitHub. Be sure to create your `.gitignore` file before installing any npm dependencies.
-
-* Make sure that your repo includes a `package.json` with the required dependencies. You can create one by running `npm init` when you first set up the project, before installing any dependencies.
-
-* Include a video of the typical user flow through your application. This includes views of the prompts and the responses after their selection.
-
-* Refer to the [Fullstack Blog Video Submission Guide](https://coding-boot-camp.github.io/full-stack/computer-literacy/video-submission-guide) for additional guidance on creating a video.
-
-* Include any other screenshots you deem necessary to help someone who has never been introduced to your application understand the purpose and function of it. This is how you will communicate to potential employers or other developers in the future what you built and why, and to show how it works.
+Each section that describes a component should include more than just one sentence explaining what it does. It should also include a code snippet of that particular component and some examples that meet the requirements of that component
 ```
-
-## Screenshots: 
-
-
 ## Links: 
 
-GitHub Repository: https://github.com/Marisol514/README-Artisan
-
-Link to Recording: https://drive.google.com/file/d/1fP8XgreGTcUw8NIS15XYri1l40VbbPUr/view 
-
-Link to Created README.md: https://drive.google.com/file/d/1T1-ZZkyUW_YOezm4bapWKORj5hixPRHP/view
-
+GitHub Repository: https://github.com/Marisol514/Regex-Unraveled
 
 
 ## Resources: 
 
-init npm -y: https://docs.npmjs.com/cli/v8/commands/npm-init
+Regular Expressions: https://coding-boot-camp.github.io/full-stack/computer-science/regex-tutorial
 
-Inquirer: https://www.npmjs.com/package/inquirer/v/8.2.4#installation
+Regular Expression Tutorial: https://www.regular-expressions.info/tutorial.html
 
-import.meta: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/import.meta
+Anchors: https://www.regular-expressions.info/anchors.html
+
+Grouping and Chapturing: https://www.regular-expressions.info/brackets.html
+
+Boundaries: https://www.regular-expressions.info/wordboundaries.html
+
+Back References: https://www.regular-expressions.info/backref.html
+
+Quantifiers: https://www.regular-expressions.info/repeat.html
+
+OR Operator: https://www.regular-expressions.info/alternation.html
+
+Bracket Expressions: https://www.regular-expressions.info/charclass.html
+
+Character Classes: https://www.regular-expressions.info/charclass.html
+
+Flags: https://www.regular-expressions.info/modifiers.html
+
+Greecy and Lazy Match: https://www.regular-expressions.info/repeat.html#greedy
+
+Look-agead and Look-behind: https://www.regular-expressions.info/lookaround.html
